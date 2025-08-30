@@ -41,7 +41,7 @@ return li;
 
 function saveTasks() {
   let tasks = [];
-  document.querySelectorAll("#taskList li").forEach((li) => {
+  document.querySelectorAll("taskList li").forEach((li) => {
     tasks.push({ text: li.firstChild.textContent, completed: li.classList.contains("completed")});
   });
   localStorage.setItem("tasks", JSON.stringify(tasks));
